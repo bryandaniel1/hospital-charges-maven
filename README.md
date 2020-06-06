@@ -32,7 +32,7 @@ The website is built from the NetBeans IDE and runs on Tomcat. The following cla
 		-el-api.jar:
 		-jasper-el.jar:
 		-jasper.jar:
-		-javax.faces.jar:
+		-javax.faces-2.2.20.jar:
 		-javax.servlet.jsp.jstl-1.2.1.jar:
 		-javax.servlet.jsp.jstl-api-1.2.1.jar:
 		-jcommon-1.0.23.jar:
