@@ -19,11 +19,15 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Provides basic reusable functionality for RESt service classes.
+ * Provides reusable functionality for REST service classes.
  *
  * @author Bryan Daniel
  */
 public class ApiServiceUtility {
+
+    // not instantiated
+    private ApiServiceUtility() {
+    }
 
     /**
      * Returns the list of names for all states in the United States.

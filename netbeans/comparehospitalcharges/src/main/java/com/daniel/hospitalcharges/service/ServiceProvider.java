@@ -49,6 +49,10 @@ public class ServiceProvider {
         apiRegionalOutpatientService = new ApiRegionalOutpatientServiceImpl();
     }
 
+    // not instantiated
+    private ServiceProvider() {
+    }
+
     /**
      * This method returns a regional inpatient service implementation.
      *

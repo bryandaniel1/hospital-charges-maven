@@ -58,7 +58,7 @@ public class OutpatientResource {
     public Response getCities(@PathParam("stateAbbreviation") String stateAbbreviation) {
         List<String> cities = ServiceProvider.getApiRegionalOutpatientService().getCities(stateAbbreviation);
         if (cities == null || cities.isEmpty()) {
-            return Response.status(Response.Status.NOT_FOUND).build();
+            return Response.status(Response.Status.BAD_REQUEST).build();
         }
         return Response.ok(cities, MediaType.APPLICATION_JSON).build();
     }
@@ -78,7 +78,7 @@ public class OutpatientResource {
         List<AmbulatoryPaymentClassification> apcs = ServiceProvider.getApiRegionalOutpatientService()
                 .getApiApcsByRegion(stateAbbreviation, cityName);
         if (apcs == null || apcs.isEmpty()) {
-            return Response.status(Response.Status.NOT_FOUND).build();
+            return Response.status(Response.Status.BAD_REQUEST).build();
         }
         return Response.ok(apcs, MediaType.APPLICATION_JSON).build();
     }
@@ -100,7 +100,7 @@ public class OutpatientResource {
         List<OutpatientCharge> inpatientCharges = ServiceProvider.getApiRegionalOutpatientService()
                 .getApiChargeResults(stateAbbreviation, cityName, apcId);
         if (inpatientCharges == null || inpatientCharges.isEmpty()) {
-            return Response.status(Response.Status.NOT_FOUND).build();
+            return Response.status(Response.Status.BAD_REQUEST).build();
         }
         return Response.ok(inpatientCharges, MediaType.APPLICATION_JSON).build();
     }

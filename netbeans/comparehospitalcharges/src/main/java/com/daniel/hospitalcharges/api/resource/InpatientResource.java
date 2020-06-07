@@ -58,7 +58,7 @@ public class InpatientResource {
     public Response getCities(@PathParam("stateAbbreviation") String stateAbbreviation) {
         List<String> cities = ServiceProvider.getApiRegionalInpatientService().getCities(stateAbbreviation);
         if (cities == null || cities.isEmpty()) {
-            return Response.status(Response.Status.NOT_FOUND).build();
+            return Response.status(Response.Status.BAD_REQUEST).build();
         }
         return Response.ok(cities, MediaType.APPLICATION_JSON).build();
     }
@@ -78,7 +78,7 @@ public class InpatientResource {
         List<DiagnosisRelatedGroup> drgs = ServiceProvider.getApiRegionalInpatientService()
                 .getApiDrgsByRegion(stateAbbreviation, cityName);
         if (drgs == null || drgs.isEmpty()) {
-            return Response.status(Response.Status.NOT_FOUND).build();
+            return Response.status(Response.Status.BAD_REQUEST).build();
         }
         return Response.ok(drgs, MediaType.APPLICATION_JSON).build();
     }
@@ -100,7 +100,7 @@ public class InpatientResource {
         List<InpatientCharge> inpatientCharges = ServiceProvider.getApiRegionalInpatientService()
                 .getApiChargeResults(stateAbbreviation, cityName, drgId);
         if (inpatientCharges == null || inpatientCharges.isEmpty()) {
-            return Response.status(Response.Status.NOT_FOUND).build();
+            return Response.status(Response.Status.BAD_REQUEST).build();
         }
         return Response.ok(inpatientCharges, MediaType.APPLICATION_JSON).build();
     }
