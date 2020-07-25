@@ -38,7 +38,7 @@ The website is built from the NetBeans IDE and runs on Tomcat. The following cla
 		-jcommon-1.0.23.jar:
 		-jfreechart-1.0.19.jar:
 		-jsp-api.jar:
-		-mysql-connector-java-5.1.23-bin.jar:
+		-mysql-connector-java-5.1.49-bin.jar:
 		-servlet-api.jar:
 		-tomcat-api.jar:
 		-tomcat-coyote.jar:

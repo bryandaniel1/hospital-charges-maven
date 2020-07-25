@@ -20,45 +20,7 @@
         <![endif]-->
         <script type="text/javascript" async="true" src="https://static.addtoany.com/menu/page.js">
         </script>
-        <h:outputScript library="js" name="A2A.js" />
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=apiKey&amp;callback=initMap" 
-                async="async" defer="defer">
-        </script>
-    </h:head>
-    <h:body>
-        <header>
-            <h1 id="title">Compare Hospital Charges</h1>
-            <nav id="nav-main">
-                <ul>
-                    <li class="ui-corner-all"><a href="#{request.contextPath}/inpatient">Find Inpatient Charges by Region</a></li>
-                    <li class="ui-corner-all"><a href="#{request.contextPath}/inpatient/comparetwo">Compare Two Inpatient Charges</a></li>
-                    <li class="ui-corner-all"><a href="#{request.contextPath}/outpatient">Find Outpatient Charges By Region</a></li>
-                    <li class="ui-corner-all"><a href="#{request.contextPath}/outpatient/comparetwo">Compare Two Outpatient Charges</a></li>
-                    <li class="ui-corner-all"><a href="#{request.contextPath}/statistics">Statistics</a></li>                
-                </ul>
-            </nav>
-        </header>
-        <!-- AddToAny BEGIN -->
-        <div id="share" class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="http://www.healthcare-topics.com/hospitalcharges" data-a2a-title="Compare Hospital Charges">
-            <a class="a2a_dd" href='https://www.addtoany.com/share'></a>
-            <a class="a2a_button_facebook"></a>
-            <a class="a2a_button_twitter"></a>
-            <a class="a2a_button_google_plus"></a>
-        </div>
-        <!-- AddToAny END -->
-        <section class="pagecontent ui-corner-all" style="width:1250px;">
-            <noscript>
-                <h2 class="error">JavaScript must be enabled to use the map.</h2>
-            </noscript>
-            <h:panelGroup styleClass="error" rendered="#{not empty mapBean.mapMessage}">
-                ${mapBean.mapMessage}
-            </h:panelGroup>
-            <p id="mapLocation" style="text-align:center;">
-                ${mapBean.mapLocationName}<br />${mapBean.mapAddress}
-            </p>                        
-            <div id="hospitalMap">
-            </div>
-        </section>
+        <h:outputScript library="js" name="A2A.js" />        
         <script type="text/javascript">
             function initMap() {
 
@@ -86,6 +48,45 @@
                 });
             }
         </script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=apiKey&amp;callback=initMap" 
+                async="async" defer="defer">
+        </script>
+    </h:head>
+    <h:body>
+        <header>
+            <h1 id="title">Compare Hospital Charges</h1>
+            <nav id="nav-main">
+                <ul>
+                    <li class="ui-corner-all"><a href="#{request.contextPath}/inpatient">Find Inpatient Charges by Region</a></li>
+                    <li class="ui-corner-all"><a href="#{request.contextPath}/inpatient/comparetwo">Compare Two Inpatient Charges</a></li>
+                    <li class="ui-corner-all"><a href="#{request.contextPath}/outpatient">Find Outpatient Charges By Region</a></li>
+                    <li class="ui-corner-all"><a href="#{request.contextPath}/outpatient/comparetwo">Compare Two Outpatient Charges</a></li>
+                    <li class="ui-corner-all"><a href="#{request.contextPath}/statistics">Statistics</a></li>
+                    <li class="ui-corner-all"><a href="#{request.contextPath}/api-doc">API</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- AddToAny BEGIN -->
+        <div id="share" class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="http://www.healthcare-topics.com/hospitalcharges" data-a2a-title="Compare Hospital Charges">
+            <a class="a2a_dd" href='https://www.addtoany.com/share'></a>
+            <a class="a2a_button_facebook"></a>
+            <a class="a2a_button_twitter"></a>
+            <a class="a2a_button_google_plus"></a>
+        </div>
+        <!-- AddToAny END -->
+        <section class="pagecontent ui-corner-all" style="width:1250px;">
+            <noscript>
+                <h2 class="error">JavaScript must be enabled to use the map.</h2>
+            </noscript>
+            <h:panelGroup styleClass="error" rendered="#{not empty mapBean.mapMessage}">
+                ${mapBean.mapMessage}
+            </h:panelGroup>
+            <p id="mapLocation" style="text-align:center;">
+                ${mapBean.mapLocationName}<br />${mapBean.mapAddress}
+            </p>                        
+            <div id="hospitalMap">
+            </div>
+        </section>
         <footer id="site-info">
             <!--<nav id="nav-info">
               <ul>

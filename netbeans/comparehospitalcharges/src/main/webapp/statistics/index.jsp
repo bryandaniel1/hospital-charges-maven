@@ -39,7 +39,8 @@
                     <li><a href="<c:url value='/inpatient/comparetwo'/>">Compare Two Inpatient Charges</a></li>
                     <li><a href="<c:url value='/outpatient'/>">Find Outpatient Charges By Region</a></li>
                     <li><a href="<c:url value='/outpatient/comparetwo'/>">Compare Two Outpatient Charges</a></li>
-                    <li><a href="<c:url value='/statistics'/>">Statistics</a></li>                
+                    <li><a href="<c:url value='/statistics'/>">Statistics</a></li>
+                    <li><a href="<c:url value='/api-doc'/>">API</a></li>
                 </ul>
             </nav>
         </header>
